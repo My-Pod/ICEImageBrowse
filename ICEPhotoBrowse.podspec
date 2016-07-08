@@ -15,7 +15,7 @@ s.ios.deployment_target = '7.0'
 s.source_files = 'Classes/*.{h,m}'
 s.dependency 'SDWebImage'
 
-    s.subspec 'ImageScrollerView' |ss|
+    s.subspec 'ImageScrollerView' do |ss|
     	ss.source_files = 'Classes/ImageScrollerView/*.{h,m}'
     	ss.resources = ['Classes/Assest/*.png']
     end
