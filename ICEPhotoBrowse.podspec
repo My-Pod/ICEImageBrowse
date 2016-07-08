@@ -17,6 +17,6 @@ s.dependency 'SDWebImage'
 
     s.subspec 'ImageScrollerView' |ss|
     	ss.source_files = 'Classes/ImageScrollerView/*.{h,m}'
-    	ss.resources = [Classes/Assest/*.png]
+    	ss.resources = ['Classes/Assest/*.png']
     end
 end
