@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17032D841D2F819B00499521 /* Failed.png in Resources */ = {isa = PBXBuildFile; fileRef = 17032D831D2F819B00499521 /* Failed.png */; };
+		17231C6F1D2F85B300BD7A8A /* ICEImageBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17231C6E1D2F85B300BD7A8A /* ICEImageBrowseView.m */; };
 		179AB56F1D2E6ECF00E53ADF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 179AB56E1D2E6ECF00E53ADF /* main.m */; };
 		179AB5721D2E6ECF00E53ADF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 179AB5711D2E6ECF00E53ADF /* AppDelegate.m */; };
 		179AB5751D2E6ECF00E53ADF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179AB5741D2E6ECF00E53ADF /* ViewController.m */; };
@@ -15,10 +17,10 @@
 		179AB57D1D2E6ECF00E53ADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179AB57B1D2E6ECF00E53ADF /* LaunchScreen.storyboard */; };
 		179AB5881D2E6ED000E53ADF /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 179AB5871D2E6ED000E53ADF /* ExampleTests.m */; };
 		179AB5931D2E6ED000E53ADF /* ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 179AB5921D2E6ED000E53ADF /* ExampleUITests.m */; };
-		179AB5A51D2E6F1D00E53ADF /* ICEPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179AB5A21D2E6F1D00E53ADF /* ICEPhotoView.m */; };
 		179AB5A61D2E6F1D00E53ADF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 179AB5A31D2E6F1D00E53ADF /* LICENSE */; };
 		179AB5A71D2E6F1D00E53ADF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 179AB5A41D2E6F1D00E53ADF /* README.md */; };
 		179AB5A91D2E6F4400E53ADF /* ICEPhotoBrowse.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 179AB5A81D2E6F4400E53ADF /* ICEPhotoBrowse.podspec */; };
+		179AB5F81D2F764200E53ADF /* ICEImageScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179AB5F61D2F764200E53ADF /* ICEImageScrollerView.m */; };
 		54B5B5DEFEA4FE683AF0FBDE /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F08C94CB18B858EC2424067 /* libPods-Example.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17032D831D2F819B00499521 /* Failed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Failed.png; sourceTree = "<group>"; };
+		17231C6D1D2F85B300BD7A8A /* ICEImageBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICEImageBrowseView.h; sourceTree = "<group>"; };
+		17231C6E1D2F85B300BD7A8A /* ICEImageBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICEImageBrowseView.m; sourceTree = "<group>"; };
 		179AB56A1D2E6ECF00E53ADF /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179AB56E1D2E6ECF00E53ADF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		179AB5701D2E6ECF00E53ADF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,11 +61,11 @@
 		179AB58E1D2E6ED000E53ADF /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		179AB5921D2E6ED000E53ADF /* ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleUITests.m; sourceTree = "<group>"; };
 		179AB5941D2E6ED000E53ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		179AB5A11D2E6F1D00E53ADF /* ICEPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICEPhotoView.h; sourceTree = "<group>"; };
-		179AB5A21D2E6F1D00E53ADF /* ICEPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICEPhotoView.m; sourceTree = "<group>"; };
 		179AB5A31D2E6F1D00E53ADF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		179AB5A41D2E6F1D00E53ADF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		179AB5A81D2E6F4400E53ADF /* ICEPhotoBrowse.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ICEPhotoBrowse.podspec; path = ../ICEPhotoBrowse.podspec; sourceTree = "<group>"; };
+		179AB5F51D2F764200E53ADF /* ICEImageScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICEImageScrollerView.h; sourceTree = "<group>"; };
+		179AB5F61D2F764200E53ADF /* ICEImageScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICEImageScrollerView.m; sourceTree = "<group>"; };
 		1F510FCB8501A7A54B226FE6 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		38B806FA7B850336FF7D3BA8 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		8F08C94CB18B858EC2424067 /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,10 +97,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17032D821D2F819B00499521 /* Assest */ = {
+			isa = PBXGroup;
+			children = (
+				17032D831D2F819B00499521 /* Failed.png */,
+			);
+			path = Assest;
+			sourceTree = "<group>";
+		};
 		179AB5611D2E6ECF00E53ADF = {
 			isa = PBXGroup;
 			children = (
-				179AB5A01D2E6F1D00E53ADF /* Classes */,
+				179AB5F31D2F764200E53ADF /* Classes */,
 				179AB5A31D2E6F1D00E53ADF /* LICENSE */,
 				179AB5A41D2E6F1D00E53ADF /* README.md */,
 				179AB5A81D2E6F4400E53ADF /* ICEPhotoBrowse.podspec */,
@@ -160,14 +173,25 @@
 			path = ExampleUITests;
 			sourceTree = "<group>";
 		};
-		179AB5A01D2E6F1D00E53ADF /* Classes */ = {
+		179AB5F31D2F764200E53ADF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				179AB5A11D2E6F1D00E53ADF /* ICEPhotoView.h */,
-				179AB5A21D2E6F1D00E53ADF /* ICEPhotoView.m */,
+				17231C6D1D2F85B300BD7A8A /* ICEImageBrowseView.h */,
+				17231C6E1D2F85B300BD7A8A /* ICEImageBrowseView.m */,
+				17032D821D2F819B00499521 /* Assest */,
+				179AB5F41D2F764200E53ADF /* ImageScrollerView */,
 			);
 			name = Classes;
 			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		179AB5F41D2F764200E53ADF /* ImageScrollerView */ = {
+			isa = PBXGroup;
+			children = (
+				179AB5F51D2F764200E53ADF /* ICEImageScrollerView.h */,
+				179AB5F61D2F764200E53ADF /* ICEImageScrollerView.m */,
+			);
+			path = ImageScrollerView;
 			sourceTree = "<group>";
 		};
 		A2798FBC25116F98D04170A7 /* Frameworks */ = {
@@ -293,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17032D841D2F819B00499521 /* Failed.png in Resources */,
 				179AB5A91D2E6F4400E53ADF /* ICEPhotoBrowse.podspec in Resources */,
 				179AB57D1D2E6ECF00E53ADF /* LaunchScreen.storyboard in Resources */,
 				179AB57A1D2E6ECF00E53ADF /* Assets.xcassets in Resources */,
@@ -372,9 +397,10 @@
 			files = (
 				179AB5751D2E6ECF00E53ADF /* ViewController.m in Sources */,
 				179AB5721D2E6ECF00E53ADF /* AppDelegate.m in Sources */,
+				179AB5F81D2F764200E53ADF /* ICEImageScrollerView.m in Sources */,
 				179AB5A71D2E6F1D00E53ADF /* README.md in Sources */,
+				17231C6F1D2F85B300BD7A8A /* ICEImageBrowseView.m in Sources */,
 				179AB56F1D2E6ECF00E53ADF /* main.m in Sources */,
-				179AB5A51D2E6F1D00E53ADF /* ICEPhotoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

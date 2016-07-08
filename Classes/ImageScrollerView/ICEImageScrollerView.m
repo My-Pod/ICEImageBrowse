@@ -6,23 +6,24 @@
 //  Copyright © 2016年 ICE. All rights reserved.
 //
 
-#import "ICEPhotoView.h"
+#import "ICEImageScrollerView.h"
 #import "UIImageView+WebCache.h"
 
 
-@interface ICEPhotoView ()<UIScrollViewDelegate>
+@interface ICEImageScrollerView ()<UIScrollViewDelegate>
 {
     UIScrollView            *_scrollView;
     UIActivityIndicatorView *_waitView; //等待加载视图
     UIView                  *_waitViewBackView;//等待加载的背景视图
     UIImageView             *_imageView;
+    UIImageView             *_failedImgV; //图片加载失败的提示图片
 }
 @property(nonatomic, copy) TapBlock tapBlock;
 
 
 @end
 
-@implementation ICEPhotoView
+@implementation ICEImageScrollerView
 
 
 
@@ -78,8 +79,21 @@
             [_waitView stopAnimating];
             
             if (error) {
-                _imageView.image = [UIImage imageNamed:@"faileImage"];
+                if (!_failedImgV) {
+                    _failedImgV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Failed"]];
+                    _failedImgV.frame = CGRectMake(0, 0, 80, 80);
+                    _failedImgV.center = _imageView.center;
+                    [_imageView addSubview:_failedImgV];
+                    _scrollView.minimumZoomScale = 1.0;
+                    _scrollView.maximumZoomScale = 1.0;
+                }
             }else{
+                if (_failedImgV) {
+                    [_failedImgV removeFromSuperview];
+                    _failedImgV = nil;
+                    _scrollView.minimumZoomScale = _minZoomValue;
+                    _scrollView.maximumZoomScale = _maxZoomValue;
+                }
                 _imageView.image = image;
             }
     }];
@@ -99,6 +113,9 @@
     if (!_waitView) {
         _waitView.center = _imageView.center;
     }
+    if (_failedImgV) {
+        _failedImgV.center = _imageView.center;
+    }
     
 }
 
@@ -113,8 +130,8 @@
     //添加scrollView
     _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     _scrollView.delegate = self;
-    _scrollView.minimumZoomScale = 1;
-    _scrollView.maximumZoomScale = 3;
+    _scrollView.minimumZoomScale = _minZoomValue;
+    _scrollView.maximumZoomScale = _maxZoomValue;
     _scrollView.backgroundColor = [UIColor darkTextColor];
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
@@ -185,11 +202,13 @@
             float newScale = [_scrollView zoomScale] * _maxZoomValue;
             CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];
             [_scrollView zoomToRect:zoomRect animated:YES];
+
         }else{
-            float newScale = [_scrollView zoomScale]/2;
+            float newScale = [_scrollView zoomScale] * _minZoomValue;
             CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];
             [_scrollView zoomToRect:zoomRect animated:YES];
         }
+        
     }
 }
 

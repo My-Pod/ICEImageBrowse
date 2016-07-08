@@ -12,7 +12,7 @@
 typedef void (^TapBlock) ();
 
 
-@interface ICEPhotoView : UIView
+@interface ICEImageScrollerView : UIView
 /**
  *  最大缩放值
  */
