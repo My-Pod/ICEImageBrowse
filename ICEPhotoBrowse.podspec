@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'ICEPhotoBrowse'
-s.version          = '1.0.0'
+s.version          = '1.0.1'
 s.summary          = '图片浏览器'
 s.description      = <<-DESC
 TODO: 图片浏览器功能封装

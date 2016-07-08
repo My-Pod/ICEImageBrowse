@@ -74,8 +74,7 @@
     
     [_waitView startAnimating];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_imageView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             [_waitView stopAnimating];
             
             if (error) {
@@ -83,16 +82,23 @@
             }else{
                 _imageView.image = image;
             }
-            
-        }];
-    });
-    
+    }];
 }
 
 - (void)setImage:(UIImage *)image{
     _imageView.image = image;
 }
 
+- (void)layoutSubviews{
+
+    [super layoutSubviews];
+    _scrollView.frame = self.bounds;
+    _imageView.frame = _scrollView.bounds;
+    if (!_waitView) {
+        _waitView.center = _imageView.center;
+    }
+    
+}
 
 /**
  *  初始化
