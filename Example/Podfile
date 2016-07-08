@@ -1,0 +1,3 @@
+target 'Example' do
+	pod 'SDWebImage'
+end
