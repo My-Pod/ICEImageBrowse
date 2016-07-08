@@ -35,6 +35,10 @@
     return self;
 }
 
+- (void)dealloc{
+    _tapBlock = nil;
+}
+
 -(id)initWithFrame:(CGRect)frame withPhotoUrl:(NSString *)photoUrl{
     self = [super initWithFrame:frame];
     if (self) {
@@ -53,6 +57,7 @@
     }
     return self;
 }
+
 
 
 - (void)setImageURL:(NSString *)url{
@@ -153,7 +158,6 @@
     if (gestureRecognizer.numberOfTapsRequired == 1) {
         if (self.tapBlock) {
             self.tapBlock();
-            _tapBlock = nil;
         }
     }
 }
