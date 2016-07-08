@@ -13,7 +13,14 @@ typedef void (^TapBlock) ();
 
 
 @interface ICEPhotoView : UIView
-
+/**
+ *  最大缩放值
+ */
+@property (nonatomic, assign) CGFloat maxZoomValue;
+/**
+ *  最小缩放值
+ */
+@property (nonatomic, assign) CGFloat minZoomValue;
 
 - (instancetype)init __attribute__((unavailable("方法不可用,请用 - initWithFrame: ")));
 

@@ -89,6 +89,8 @@
     _imageView.image = image;
 }
 
+
+
 - (void)layoutSubviews{
 
     [super layoutSubviews];
@@ -104,6 +106,10 @@
  *  初始化
  */
 - (void)p_initConfig{
+    
+    _maxZoomValue = 2.0f;
+    _minZoomValue = 0.5f;
+    
     //添加scrollView
     _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     _scrollView.delegate = self;
@@ -176,7 +182,7 @@
 //    NSLog(@"双击");
     if (gestureRecognizer.numberOfTapsRequired == 2) {
         if(_scrollView.zoomScale == 1){
-            float newScale = [_scrollView zoomScale] *2;
+            float newScale = [_scrollView zoomScale] * _maxZoomValue;
             CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];
             [_scrollView zoomToRect:zoomRect animated:YES];
         }else{
@@ -189,7 +195,7 @@
 
 -(void)handleTwoFingerTap:(UITapGestureRecognizer *)gestureRecongnizer{
 //    NSLog(@"2手指操作");
-    float newScale = [_scrollView zoomScale]/2;
+    float newScale = [_scrollView zoomScale] * _minZoomValue;
     CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecongnizer locationInView:gestureRecongnizer.view]];
     [_scrollView zoomToRect:zoomRect animated:YES];
 }
