@@ -13,5 +13,5 @@ s.source           = { :git => 'https://github.com/My-Pod/ICEPhotoBrowse.git', :
 
 s.ios.deployment_target = '7.0'
 s.source_files = 'Classes/*.{h,m}'
-
+s.dependency 'SDWebImage'
 end
